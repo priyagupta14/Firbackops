@@ -8,6 +8,11 @@ const datagetService = async req => {
     {},
   );
   const manipulateData = makeManipulateDataCall([nifty]);
-  return manipulateData;
+  const randomUser = await utils.makeAPICall(
+    `https://randomuser.me/api/`,
+    'GET',
+    {},
+  );
+  return randomUser;
 };
 module.exports = { datagetService };
