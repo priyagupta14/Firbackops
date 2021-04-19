@@ -1,4 +1,4 @@
-const { makeManipulateDataCall } = require('./manipulateData.service.js');
+const { makeMaper1Call } = require('./maper1.service.js');
 const utils = require('../utils/index.js');
 
 const datagetService = async req => {
@@ -7,12 +7,12 @@ const datagetService = async req => {
     'GET',
     {},
   );
-  const manipulateData = makeManipulateDataCall([nifty]);
-  const randomUser = await utils.makeAPICall(
+  const randomapi = await utils.makeAPICall(
     `https://randomuser.me/api/`,
     'GET',
     {},
   );
-  return randomUser;
+  const maper1 = makeMaper1Call([nifty, randomapi]);
+  return maper1;
 };
 module.exports = { datagetService };
