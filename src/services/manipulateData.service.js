@@ -5,6 +5,7 @@ const makeManipulateDataCall = nifty => {
   const sortByPercentChange = lodash.orderBy(niftyData, 'pChange', 'desc');
   const topTenGainers = lodash.take(sortByPercentChange, 10);
   const topTenLosers = lodash.takeRight(sortByPercentChange, 10);
+  console.log(randomUser);
   return {
     topTenGainers,
     topTenLosers,
