@@ -1,3 +1,3 @@
-const { dataRouter } = require('./data.route');
+const { dRouter } = require('./d.route');
 
-module.exports = { dataRouter };
+module.exports = { dRouter };
