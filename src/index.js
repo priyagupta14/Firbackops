@@ -1,7 +1,7 @@
 const express = require('express');
 const env = require('dotenv');
 
-const { dataRouter } = require('./routes');
+const { todoRouter } = require('./routes');
 
 env.config();
 const port = process.env.PORT || 8080;
@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/data', dataRouter);
+app.use('/todo', todoRouter);
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
